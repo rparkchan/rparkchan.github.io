@@ -5,12 +5,12 @@ var mixers;
 
 function init(){ 
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 0.1, 10000 );
+  camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 10000);
   clock = new THREE.Clock();
   loader = new THREE.JSONLoader(); 
-  renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
+  renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 
-  container = document.getElementById( 'container' );
+  container = document.getElementById('container');
 
   mixers = [];
 
@@ -23,8 +23,8 @@ function setup() {
 
   clock.start();
 
-  renderer.setPixelRatio( window.devicePixelRatio );
-  renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   
@@ -42,9 +42,10 @@ function createLights() {
 }
 
 function createPanda() {
-  loader.load("models/jsons/panda_walk.json", function (geometry, materials) { 
+  loader.load("models/jsons/panda_walk2.json", function (geometry, materials) { 
     skinMats(materials);
-    panda = new THREE.SkinnedMesh( geometry, materials );
+    console.log(geometry);
+    panda = new THREE.SkinnedMesh(geometry, materials);
 
     console.log(materials);
 
@@ -53,16 +54,16 @@ function createPanda() {
     panda.rotation.set(0,Math.PI/3,0)
     panda.castShadow = true;
 
-    createSkeletalMixer( panda, mixers, 'walk' );
-    scene.add( panda );
+    createSkeletalMixer(panda, mixers, 'walk');
+    scene.add(panda);
   });
 }
 
 function createFloor() {
-  var geometry = new THREE.CircleGeometry( 14, 12 );
+  var geometry = new THREE.CircleGeometry(14, 12);
   var material = new THREE.MeshStandardMaterial({
     color: 0xffffff, 
-    metalness: 0.25, 
+    metalness: 0.15, 
     side: THREE.DoubleSide
   });
   var plane = new THREE.Mesh(geometry, material);
