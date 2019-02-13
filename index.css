@@ -1,0 +1,75 @@
+body { 
+  margin: 0; 
+}
+
+#container { 
+  position: absolute;
+  width: 100vw; 
+  height: 100vh; 
+  z-index: 0;
+}
+
+#links {
+  position: absolute;
+  width: 100vw;
+  height: 3vh;
+  margin: 0 auto;
+  /* left: 40vw; */
+  top: 78vh;
+  /* border: 2px ridge rgb(177, 175, 175);
+  border-radius: 4px; */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24;
+}
+
+#toon {
+  position: absolute;
+  width: 30vw;
+  left: 35vw;
+  top: 55.5vh;
+  text-align: center;
+  font-family: Courier;
+  /* color: rgb(49, 113, 216); */
+}
+
+#toon-name {
+  font-size: 14px;
+}
+
+#toon-guild {
+  font-size: 12px;
+}
+
+a {
+  color: black;
+  cursor: pointer;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+a i {
+  transition: all 0.32s;
+}
+
+#github:hover {
+  color: rgb(120, 120, 120);
+}
+
+#soundcloud:hover {
+  color: rgb(255, 127, 52);
+}
+
+#facebook:hover {
+  color: rgb(72, 109, 189);
+}
+
+#instagram:hover {
+  color: rgb(229, 105, 105);
+}
+
+#twitter:hover {
+  color: rgb(29, 161, 242);
+}
