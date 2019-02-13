@@ -26,13 +26,11 @@ body {
 }
 
 #toon {
-  position: absolute;
-  width: 30vw;
-  left: 35vw;
+  position: fixed;
+  width: 100vw;
   top: 49vh;
   text-align: center;
   font-family: Courier;
-  /* color: rgb(49, 113, 216); */
 }
 
 #toon-name {

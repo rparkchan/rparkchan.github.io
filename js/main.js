@@ -1,6 +1,7 @@
 var scene, camera, clock, loader, renderer;
 var hem_light, point_light; 
 var panda; 
+var toon, toon_name, toon_guild;
 var mixers = []; 
 
 function init() { 
@@ -12,6 +13,9 @@ function init() {
   loader = new THREE.JSONLoader(); 
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 
+  toon = document.getElementById("toon");
+  toon_name = document.getElementById("toon-name");
+  toon_guild = document.getElementById("toon-guild");
   resizeWindow();
 
   setup();
@@ -33,8 +37,8 @@ function setup() {
 }
 
 function resizeWindow() {
-  document.getElementById("toon-name").style.fontSize = 19*window.innerHeight/1000.;
-  document.getElementById("toon-guild").style.fontSize = 17*window.innerHeight/1000.;
+  toon_name.style.fontSize = 19*window.innerHeight/1000.;
+  toon_guild.style.fontSize = 17*window.innerHeight/1000.;
 
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
@@ -66,13 +70,13 @@ function createFloor() {
 }
 
 function createPanda() {
-  loader.load("models/jsons/panda_walk2.json", function (geometry, materials) { 
+  loader.load("models/jsons/panda_walk3.json", function (geometry, materials) { 
     skinMats(materials);
     panda = new THREE.SkinnedMesh(geometry, materials);
 
     panda.scale.set(.8, .8, .8);
-    panda.position.set(0,0,0);
-    panda.rotation.set(0,Math.PI/3,0)
+    // panda.position.set(0,0,0);
+    panda.rotation.set(0,Math.PI/3.2,0)
     panda.castShadow = true;
 
     createSkeletalMixer(panda, mixers, 'walk');
