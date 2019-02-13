@@ -18,7 +18,7 @@ function init() {
 }
 
 function setup() { 
-  camera.rotation.x -= Math.PI/10;
+  camera.rotation.x -= Math.PI/9.25;
   camera.position.set(0, 50, 100);
   window.addEventListener('resize', resizeWindow, false);
 
@@ -53,7 +53,7 @@ function createLights() {
 }
 
 function createFloor() {
-  var geometry = new THREE.CircleGeometry(14, 12);
+  var geometry = new THREE.CircleGeometry(18, 12);
   var material = new THREE.MeshStandardMaterial({
     color: 0xffffff, 
     metalness: 0.15, 
@@ -70,7 +70,7 @@ function createPanda() {
     skinMats(materials);
     panda = new THREE.SkinnedMesh(geometry, materials);
 
-    panda.scale.set(.6, .6, .6);
+    panda.scale.set(.8, .8, .8);
     panda.position.set(0,0,0);
     panda.rotation.set(0,Math.PI/3,0)
     panda.castShadow = true;
