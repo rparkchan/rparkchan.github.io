@@ -1,5 +1,7 @@
 body { 
   margin: 0; 
+  opacity: 0;
+  transition: 800ms opacity ease-in; 
 }
 
 #container { 

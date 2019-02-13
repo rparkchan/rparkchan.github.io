@@ -94,6 +94,10 @@ function animate() {
   renderer.render(scene, camera);
 }
 
+window.onload = () => {
+  document.querySelector("body").style.opacity = 1;
+}
+
 init(); 
 
 createLights();
