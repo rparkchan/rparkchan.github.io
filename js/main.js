@@ -33,8 +33,8 @@ function setup() {
 }
 
 function resizeWindow() {
-  document.getElementById("toon-name").style.fontSize = 17.5*window.innerHeight/1000.;
-  document.getElementById("toon-guild").style.fontSize = 15.5*window.innerHeight/1000.;
+  document.getElementById("toon-name").style.fontSize = 19*window.innerHeight/1000.;
+  document.getElementById("toon-guild").style.fontSize = 17*window.innerHeight/1000.;
 
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
