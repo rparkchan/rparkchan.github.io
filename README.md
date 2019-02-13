@@ -1,3 +1,3 @@
 ## rparkchan.github.io
 
-walking panda
+WoW-themed personal page, linking to relevant profiles.
