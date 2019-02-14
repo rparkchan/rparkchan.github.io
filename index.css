@@ -12,7 +12,7 @@ body {
 }
 
 #links {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 3vh;
   margin: 0 auto;
