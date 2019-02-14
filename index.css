@@ -1,7 +1,11 @@
 body { 
+  /* opacity: 0; */
+  /* transition: 800ms opacity ease-in;  */
   margin: 0; 
-  opacity: 0;
-  transition: 800ms opacity ease-in; 
+}
+
+.fade {
+  display: none;
 }
 
 #container { 

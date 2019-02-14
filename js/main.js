@@ -91,6 +91,9 @@ function createPanda() {
 
     createSkeletalMixer(panda, mixers, 'walk');
     scene.add(panda);
+
+    // only fade after panda mesh is fully loaded
+    $('div.fade').fadeIn(1200);
   });
 }
 
