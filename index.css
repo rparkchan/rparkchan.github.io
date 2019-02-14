@@ -1,6 +1,4 @@
 body { 
-  /* opacity: 0; */
-  /* transition: 800ms opacity ease-in;  */
   margin: 0; 
 }
 
@@ -81,4 +79,8 @@ a i {
 
 #twitter:hover {
   color: rgb(29, 161, 242);
+}
+
+#twitch:hover {
+  color: rgb(100, 65, 164);
 }

@@ -47,8 +47,8 @@ function resizeWindow() {
   toon_guild.style.fontSize = 16*window.innerHeight/1000.;
   links_container.style.fontSize = 30*window.innerHeight/1000.;
   for(let i = 0; i < links.length; i++) {
-    links[i].style.paddingLeft = 24*window.innerHeight/1000.;
-    links[i].style.paddingRight = 24*window.innerHeight/1000.;
+    links[i].style.paddingLeft = 18*window.innerHeight/1000.;
+    links[i].style.paddingRight = 18*window.innerHeight/1000.;
   };
 
   camera.aspect = window.innerWidth / window.innerHeight;
