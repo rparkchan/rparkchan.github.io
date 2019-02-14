@@ -1,7 +1,7 @@
 var scene, camera, clock, loader, renderer;
 var hem_light, point_light; 
 var panda; 
-var toon, toon_name, toon_guild;
+var toon, toon_name, toon_guild, links_container, links;
 var mixers = []; 
 
 function init() { 
@@ -16,6 +16,8 @@ function init() {
   toon = document.getElementById("toon");
   toon_name = document.getElementById("toon-name");
   toon_guild = document.getElementById("toon-guild");
+  links_container = document.getElementById("links");
+  links = document.getElementsByClassName("link");
   resizeWindow();
 
   setup();
@@ -37,8 +39,14 @@ function setup() {
 }
 
 function resizeWindow() {
-  toon_name.style.fontSize = 19*window.innerHeight/1000.;
-  toon_guild.style.fontSize = 17*window.innerHeight/1000.;
+  toon_name.style.fontSize = 20*window.innerHeight/1000.;
+  toon_guild.style.fontSize = 16*window.innerHeight/1000.;
+  links_container.style.fontSize = 30*window.innerHeight/1000.;
+  for(let i = 0; i < links.length; i++) {
+    console.log(links[i].style);
+    links[i].style.paddingLeft = 24*window.innerHeight/1000.;
+    links[i].style.paddingRight = 24*window.innerHeight/1000.;
+  };
 
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
